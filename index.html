@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        main{
+            width: 100%;
+            height: 100vh;
+            position: relative;
+            background-image:linear-gradient(15deg, #d33f34 50%, #a61322 50.1%);
+            >figure{
+                position: absolute;
+                top: 50%;
+                left: 50%;     
+                transform: translateX(-50%) translateY(-50%);
+              
+            }
+            >h2{ 
+                    position: absolute;
+                    width: 100%;
+                    text-align: center;
+                    top: 32%;
+                    font-size: 30px;
+                }
+                >span{
+                    position: absolute;
+                    top: 65%; width: 45%;
+                    font-size: 20px;
+                    text-align: end;
+                }
+                >button{
+                    position: absolute;
+                    top: 65%; left: 48%;
+                    width: 150px;
+                    background-color: inherit;
+                    border-radius:20px ;
+                    cursor: pointer;
+                    font-size: 20px;
+                    text-align:center;
+                    text-transform: capitalize;
+                }  
+              >.btn{
+                width: 100%;
+                display: flex;
+                position: absolute;
+                top: 40%;
+                /* left: 50%; */
+                
+                justify-content: center;
+             
+                >.dot{
+                    width: 15px;
+                    height: 15px;
+                    cursor: pointer;
+                    border-radius: 20px;
+                    margin: 5px;
+                    transition: .4s;
+                    &:nth-of-type(1){
+                        background-image:linear-gradient(15deg, #d33f34 50%, #a61322 50.1%);
+                    }
+                    &:nth-of-type(2){
+                        background-image:linear-gradient(15deg, rgb(71, 149, 209) 50%, rgb(0, 110, 184) 50.1%);
+                    }
+                    &:nth-of-type(3){
+                        background-image:linear-gradient(15deg, rgb(108, 217, 106) 50%, rgb(0, 152, 111) 50.1%);
+                    }
+                    &:nth-of-type(4){
+                        background-image:linear-gradient(15deg, rgb(41, 42, 47) 50%, rgb(19, 21, 25) 50.1%);
+                       
+                    }
+                }
+            }
+        }
+    </style>
+<body>
+    <main>
+    <figure class="img4">
+        <img src="img/4.jpg" alt="">
+    </figure>
+
+    <figure class="img2">
+        <img src="img/3.jpg" alt="">
+    </figure>
+    
+    <figure class="img3">
+        <img src="img/2.jpg" alt="">
+    </figure>
+
+    <figure class="img1">
+        <img src="img/1.jpg" alt="">
+    </figure>
+    <h2>nike shoes</h2>
+    <span>130$</span>
+    <button>add to card</button> 
+    <div class="btn"> 
+        <div class="dot" onload="para1()" onclick="para1()"></div>
+        <div class="dot" onclick="para2()"></div>
+        <div class="dot" onclick="para3()"></div>
+        <div class="dot" onclick="para4()"></div>
+    </div>
+
+</main>
+</body>
+    <script>
+        const bg = document.querySelector('main')
+        const dot = document.querySelector('.dot')
+        const img1= document.querySelector('.img1')
+        const img2= document.querySelector('.img2')
+        const img3= document.querySelector('.img3')
+        const img4= document.querySelector('.img4')
+        function para1(){
+            bg.style.background='linear-gradient(15deg, #d33f34 50%, #a61322 50.1%)'
+            img1.style.opacity=1
+            img2.style. opacity=0
+            img3.style. opacity=0
+            img4.style. opacity=0
+        }
+
+        function para2(){
+            bg.style.background='linear-gradient(15deg, rgb(71, 149, 209) 50%, rgb(0, 110, 184) 50.1%)'
+            img1.style. opacity=0
+            img2.style. opacity=1
+            img3.style. opacity=0
+            img4.style. opacity=0
+        }
+
+        function para3(){
+            bg.style.background='linear-gradient(15deg, rgb(108, 217, 106) 50%, rgb(0, 152, 111) 50.1%)'
+            img1.style. opacity=0
+            img2.style. opacity=0
+            img3.style. opacity=1
+            img4.style. opacity=0
+        }
+
+        function para4(){
+            bg.style.background='linear-gradient(15deg, rgb(41, 42, 47) 50%, rgb(19, 21, 25) 50.1%)'
+            img1.style. opacity=0
+            img2.style. opacity=0
+            img3.style. opacity=0
+            img4.style. opacity=1
+        }
+    </script>
+</html>
